@@ -1,0 +1,141 @@
+{
+    "caseStudies": [
+      {
+        "id": 1,
+        "title": "Complex Cardiac Case: Acute Coronary Syndrome",
+        "scenario": "A 62-year-old male with history of hypertension and smoking presents to the ED with severe substernal chest pain radiating to his left jaw, rated 9/10. Vital signs: BP 158/94 mmHg, HR 112 bpm, RR 24/min, SpO2 92% on room air. ECG shows ST-segment elevation in leads II, III, and aVF. Patient is diaphoretic and anxious.",
+        "questions": [
+          {
+            "id": 1,
+            "text": "What is the priority nursing action?",
+            "options": [
+              "Administer sublingual nitroglycerin 0.4 mg",
+              "Obtain 12-lead ECG within 10 minutes",
+              "Start oxygen via nasal cannula at 4 L/min",
+              "Begin therapeutic hypothermia protocol"
+            ],
+            "correct": 1,
+            "explanation": "While all actions are important, obtaining a 12-lead ECG within 10 minutes of arrival is critical for STEMI diagnosis per AHA guidelines. Oxygen should only be administered if SpO2 <90% to avoid hyperoxygenation risks. Nitroglycerin requires blood pressure monitoring first. Therapeutic hypothermia isn't indicated until after ROSC in cardiac arrest.",
+            "reference": "2023 AHA ACLS Guidelines, Section 4.2"
+          },
+          {
+            "id": 2,
+            "text": "The patient suddenly develops ventricular fibrillation. Which intervention takes precedence?",
+            "options": [
+              "Administer amiodarone 300 mg IV",
+              "Begin high-quality chest compressions",
+              "Prepare for synchronized cardioversion",
+              "Confirm rhythm in two leads"
+            ],
+            "correct": 1,
+            "explanation": "Immediate initiation of CPR with chest compressions is critical for pulseless VF per ACLS algorithms. Rhythm confirmation should occur simultaneously during CPR setup. Defibrillation should be performed as soon as the machine is ready, but compressions cannot be delayed. Amiodarone comes after shock delivery.",
+            "reference": "AHA ACLS Cardiac Arrest Algorithm 2023"
+          },
+          {
+            "id": 3,
+            "text": "Which lab result requires immediate intervention?",
+            "options": [
+              "Troponin I: 8.2 ng/mL (normal <0.04)",
+              "Potassium: 3.1 mEq/L",
+              "Creatinine: 1.8 mg/dL",
+              "BNP: 450 pg/mL"
+            ],
+            "correct": 1,
+            "explanation": "Hypokalemia (K+ 3.1) increases risk of lethal arrhythmias in ACS. While elevated troponin confirms myocardial injury, it's expected in STEMI. Potassium should be corrected to maintain 4.0-5.0 mEq/L in ACS. Creatinine elevation needs monitoring but isn't immediately life-threatening. BNP elevation indicates heart failure but isn't acute.",
+            "reference": "ACC/AHA STEMI Management Guidelines 2022"
+          },
+          {
+            "id": 4,
+            "text": "The patient is scheduled for emergency PCI. Which pre-procedure medication is contraindicated?",
+            "options": [
+              "Aspirin 325 mg chewable",
+              "Ticagrelor 180 mg",
+              "Metoprolol 5 mg IV",
+              "Heparin 60 units/kg IV"
+            ],
+            "correct": 2,
+            "explanation": "IV metoprolol is contraindicated in acute HF, cardiogenic shock, or other hemodynamic compromise. While beta-blockers are important in STEMI, they require stable blood pressure (SBP >110 mmHg). The other medications are standard pre-PCI therapy: aspirin (antiplatelet), ticagrelor (P2Y12 inhibitor), heparin (anticoagulant).",
+            "reference": "PCI Pre-Procedure Protocol, Journal of Interventional Cardiology 2023"
+          },
+          {
+            "id": 5,
+            "text": "Post-PCI, the patient develops sudden hypotension (70/40 mmHg) and jugular venous distension. What complication is most likely?",
+            "options": [
+              "Cardiac tamponade",
+              "Ventricular septal rupture",
+              "Acute stent thrombosis",
+              "Retroperitoneal hemorrhage"
+            ],
+            "correct": 0,
+            "explanation": "Beck's triad (hypotension, JVD, muffled heart sounds) suggests cardiac tamponade from coronary artery perforation during PCI. Requires immediate echocardiogram and pericardiocentesis. Septal rupture would present with new murmur and pulmonary edema. Stent thrombosis shows recurrent STEMI. Retroperitoneal bleed causes abdominal pain.",
+            "reference": "PCI Complications Manual, SCAI 2023"
+          },
+          {
+            "id": 6,
+            "text": "Which assessment finding indicates left ventricular failure?",
+            "options": [
+              "Pulsus paradoxus >10 mmHg",
+              "Bibasilar crackles",
+              "Hepatojugular reflux",
+              "Kussmaul's sign"
+            ],
+            "correct": 1,
+            "explanation": "Bibasilar crackles indicate pulmonary edema from left ventricular failure. Pulsus paradoxus suggests cardiac tamponade. Hepatojugular reflux and Kussmaul's sign are right heart failure indicators. LV failure leads to pulmonary congestion, RV failure to systemic congestion.",
+            "reference": "Cardiac Physical Exam, Braunwald's Heart Disease 12th Ed"
+          },
+          {
+            "id": 7,
+            "text": "The patient's rhythm converts to atrial fibrillation with RVR. Which medication is contraindicated?",
+            "options": [
+              "Diltiazem IV",
+              "Metoprolol IV",
+              "Amiodarone IV",
+              "Digoxin load"
+            ],
+            "correct": 3,
+            "explanation": "Digoxin loading is contraindicated in acute coronary syndrome due to increased myocardial oxygen demand and pro-arrhythmic effects. Calcium channel blockers (diltiazem) or beta-blockers (metoprolol) are first-line. Amiodarone is acceptable if LV dysfunction exists.",
+            "reference": "AHA Managing AF in ACS, Circulation 2022"
+          },
+          {
+            "id": 8,
+            "text": "Which electrolyte imbalance increases digoxin toxicity risk?",
+            "options": [
+              "Hypernatremia",
+              "Hypocalcemia",
+              "Hypomagnesemia",
+              "Hyperphosphatemia"
+            ],
+            "correct": 2,
+            "explanation": "Hypomagnesemia potentiates digoxin toxicity by impairing Na-K-ATPase function and increasing myocardial sensitivity. Magnesium supplementation is crucial. Hypokalemia also increases toxicity risk. Calcium abnormalities affect contractility but not directly digoxin toxicity.",
+            "reference": "Pharmacotherapy Principles, DiPiro 12th Ed"
+          },
+          {
+            "id": 9,
+            "text": "Which finding indicates need for intra-aortic balloon pump (IABP)?",
+            "options": [
+              "Cardiac index 1.8 L/min/m²",
+              "PAWP 18 mmHg",
+              "Mixed venous O2 55%",
+              "Systemic vascular resistance 800 dynes/sec/cm⁻⁵"
+            ],
+            "correct": 0,
+            "explanation": "IABP is indicated for cardiogenic shock (CI <2.2 L/min/m²) or mechanical complications. PAWP 18 indicates fluid overload. SvO2 <60% shows impaired oxygenation. High SVR suggests vasoconstriction but isn't direct IABP indication.",
+            "reference": "Mechanical Circulatory Support Guidelines, ESC 2023"
+          },
+          {
+            "id": 10,
+            "text": "Which discharge teaching is most critical?",
+            "options": [
+              "Daily weight monitoring",
+              "Low-sodium diet education",
+              "Dual antiplatelet therapy adherence",
+              "Exercise stress test scheduling"
+            ],
+            "correct": 2,
+            "explanation": "DAPT (aspirin + P2Y12 inhibitor) adherence is crucial to prevent stent thrombosis (1% risk if compliant vs 5-10% if non-compliant). While other teachings are important, medication non-adherence carries highest mortality risk post-PCI.",
+            "reference": "AHA Secondary Prevention Guidelines 2023"
+          }
+        ]
+      }
+    ]
+  }

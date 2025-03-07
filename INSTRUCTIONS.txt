@@ -1,0 +1,111 @@
+Instruction: I want you to make an app like https://nurses.archerreview.com/ a website for nclex for nurse practice questions, programming language should be html, css, bootstrap, javascript, json and others programming language that you would also want to add to make the program easy. No database. Separate the files. The User should also have a landing page with logo before he starts the quiz/test. Its up to you on what you put on the landing page with those different features. Tips: You can have a navbar or a sidebar up to you. Make the landing page modern, very beautiful and attractive user friendly website (make bootstrap work almost all of it) and add your css if needed. 
+
+Implementation: Now I want a website that has only one type of questionnaire, Case study questionnaire type, like a scenario case study type, its up to you on how you would like to construct it. A timer to keep track for the user to know how many minutes/hours they're answering. Then I want an analytics with graphs after submitting the quizzes (the current quiz), and a overall analytics of the previous quizzes with graphs, that saves in the browser storage. After submitting, it should post the score, percentage, time taken, the users answer, the correct answer and explanation. Its up to you how you would construct it all. Also give me a sample at least 1 case study example for me to test the website you made. I want the case study to have many different question within 1 case study. I want a button in the landing page that redirect me to the Overall Analytics.
+
+Example: 
+Case study:1 ||  Question1:
+Case study:1 ||  Question2:
+Case study:1 ||  Question3:
+Case study:1 ||  Question4:
+Case study:1 ||  Question5:
+Case study:1 ||  Question6:
+Case study:1 ||  Question7:
+Case study:1 ||  Question8:
+Case study:1 ||  Question9:
+Case study:1 ||  Question10:
+
+Make sure to separate all the files, example:
+Index.html
+quiz.html
+analytics.html
+results.html
+css/ 
+>style.css
+>analytics.css
+>quiz.css
+>print.css
+>results.css
+js/
+>quiz.js
+>app.js
+>analytics.js
+>results.js
+>questions.js
+etc...
+
+Very important: Make the User interface of the website beautiful. Amaze me. I want you to code all the features and functions that i have gave you do not give me comments that i am the one that needs to code it because i want you to code and implement all of it, give me a complete set of codes that i only should copy, And give me a guide on what file should i create, edit and so on. Do not give me a zip file for all of the codes if you can't finish it in one reply. Make sure the Json file is the last code that you will be giving me for it is a long code full of questionnaire after coding all of the implementation ask me if you should code the json file, i will send a separate instructions to it. Do not use any server, I want it to easily access by browser directly. Verify every reply the progress of our code and the missing till we are done.
+
+Important Features:
+Create the chart visualizations, Score calculation and analytics using Chart.js, Performance graphs (pie chart for score distribution, bar chart for time per question, Another chart for how many times the user has taken the quiz, etc..)
+
+LocalStorage integration for saving results
+
+Detailed result breakdown with explanations
+
+Exportable results, Print-friendly results (important PDF, CSV, JSON, ETC..)
+
+Adaptive progress bar
+
+Question flagging system
+
+Accessibility features
+
+Text size adjuster for accessibility
+
+Session resume capability
+
+Confidence meter for each answer
+
+Add form validation
+
+Implement responsive mobile optimizations
+
+Add loading states and error handling
+
+Night mode toggle
+
+
+
+
+So in Json, I want to test it first if the whole website is working so give me 1 case study with 10 questions, the questions should be long and very hard , the explanations should be long and very accurate and efficient
+
+
+confidence level is not working, in the last question, next should become submit button.
+Add more chart types in analytics
+
+Implement touch swipe navigation
+
+Key Features to Validate:
+
+Complex scenario persists through all questions
+
+Detailed explanations appear in results
+
+Confidence meter affects analytics
+
+Flagged questions show in review
+
+All charts update with this data
+
+Mobile responsiveness maintains readability
+
+
+
+
+
+
+
+now with that, i want the User interface for the flagged to have like It should show the complete details so that the user will really get of where they are reading for their reference, a transparent approach.
+
+
+Title: Complex Cardiac Case: Acute Coronary Syndrome
+Scenario: A 62-year-old male with history of hypertension and smoking presents to the ED with severe substernal chest pain radiating to his left jaw, rated 9/10. Vital signs: BP 158/94 mmHg, HR 112 bpm, RR 24/min, SpO2 92% on room air. ECG shows ST-segment elevation in leads II, III, and aVF. Patient is diaphoretic and anxious.
+
+Case Study 1 - Question 1: What is the priority nursing action?
+Your answer: Begin therapeutic hypothermia protocol
+
+Correct answer: Obtain 12-lead ECG within 10 minutes
+
+Rationale: While all actions are important, obtaining a 12-lead ECG within 10 minutes of arrival is critical for STEMI diagnosis per AHA guidelines. Oxygen should only be administered if SpO2 <90% to avoid hyperoxygenation risks. Nitroglycerin requires blood pressure monitoring first. Therapeutic hypothermia isn't indicated until after ROSC in cardiac arrest.
+
+Flagged on 3/7/2025

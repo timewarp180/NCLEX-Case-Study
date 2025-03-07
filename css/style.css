@@ -1,0 +1,98 @@
+:root {
+    --primary-color: #2A5C82;
+    --secondary-color: #5BA4E6;
+    --night-bg: #1a1a1a;
+    --night-text: #f8f9fa;
+}
+
+.landing-page {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    min-height: 100vh;
+}
+
+.navbar {
+    padding: 1rem 0;
+}
+
+.hero {
+    padding-top: 100px;
+    min-height: 80vh;
+}
+
+.start-quiz-btn {
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    transition: transform 0.3s ease;
+}
+
+.start-quiz-btn:hover {
+    transform: translateY(-3px);
+}
+
+.features .card {
+    transition: transform 0.3s ease;
+    border: none;
+}
+
+.features .card:hover {
+    transform: translateY(-5px);
+}
+
+/* Night Mode */
+body.night-mode {
+    background-color: var(--night-bg);
+    color: var(--night-text);
+}
+
+.night-mode .card {
+    background-color: #2d2d2d;
+    color: var(--night-text);
+}
+
+/* Accessibility */
+.large-text {
+    font-size: 1.25rem;
+}
+
+:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Add to existing */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,255,255,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    padding: 1rem;
+    background: white;
+    color: var(--primary-color);
+}
+
+.skip-link:focus {
+    left: 1rem;
+    top: 1rem;
+}

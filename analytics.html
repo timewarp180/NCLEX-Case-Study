@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics | NursePrep</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/analytics.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="Logo" width="30" height="30">
+                Dr. Pebs
+            </a>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+        <h2 class="mb-4">Performance Analytics</h2>
+        
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Overall Performance</h5>
+                        <canvas id="overallChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Time Management</h5>
+                        <canvas id="timeChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Progress Over Time</h5>
+                        <canvas id="progressChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!-- Add this section before closing main tag -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">📌 Flagged Questions Review</h5>
+                            <div id="flaggedQuestions"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </main>
+
+    <script src="js/questions.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/analytics.js"></script>
+</body>
+</html>

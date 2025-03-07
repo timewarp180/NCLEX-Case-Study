@@ -1,0 +1,29 @@
+/* For better responsive control */
+#scoreChart {
+    max-width: 300px;
+    margin: 20px auto;
+}
+
+@media (max-width: 768px) {
+    #scoreChart {
+        max-width: 250px;
+    }
+}
+
+.bg-success-light { background-color: #e8f5e9; }
+.bg-danger-light { background-color: #ffebee; }
+.bg-info-light { background-color: #e3f2fd; }
+
+.explanation-box {
+    border-left: 4px solid #2196F3;
+    background-color: #f8f9fa;
+}
+
+.scenario-box {
+    border-left: 4px solid #4CAF50;
+}
+
+.badge {
+    font-size: 0.9em;
+    padding: 0.5em 0.75em;
+}

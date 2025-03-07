@@ -1,0 +1,139 @@
+.quiz-page {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+.progress {
+    height: 8px;
+    border-radius: 4px;
+}
+
+.question-card {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.option-label {
+    display: block;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border: 2px solid #dee2e6;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.option-label:hover {
+    border-color: var(--primary-color);
+    background-color: #f8f9fa;
+}
+
+.option-label.selected {
+    border-color: var(--primary-color);
+    background-color: #e3f2fd;
+}
+
+.confidence-meter {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.confidence-btn {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.confidence-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+@media (max-width: 768px) {
+    .question-card {
+        padding: 1rem;
+    }
+    
+    .option-label {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+    
+    .confidence-btn {
+        padding: 0.25rem;
+        font-size: 0.8rem;
+    }
+    
+    #timer {
+        font-size: 0.9rem;
+    }
+}
+
+/* Add touch optimization */
+@media (hover: none) {
+    .option-label {
+        min-height: 60px;
+        padding: 1.5rem;
+    }
+    
+    .quiz-controls .btn {
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+}
+
+/* Pause state */
+.paused {
+    opacity: 0.7;
+    position: relative;
+}
+
+.paused::after {
+    content: "PAUSED";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: red;
+    font-weight: bold;
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+    .case-study-header {
+        position: static !important;
+        font-size: 0.9rem;
+    }
+    
+    .option-label {
+        font-size: 0.85rem;
+        padding: 0.75rem;
+    }
+    
+    #timer {
+        font-size: 0.9rem;
+    }
+    
+    .confidence-btn {
+        padding: 0.25rem 0.5rem;
+    }
+}
