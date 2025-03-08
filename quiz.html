@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Case Study Practice | NursePrep</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <link href="css/quiz.css" rel="stylesheet">
 </head>
 <body class="quiz-page">
@@ -23,40 +24,71 @@
         </div>
     </nav>
 
-    <main aria-live="polite" aria-atomic="true" class="container py-4" id="mainContent">
-        
-
-    <a href="#mainContent" class="skip-link">Skip to questions</a>
-
-        <div role="status" id="liveRegion"></div>
-
-        <div class="progress mb-4">
-            <div class="progress-bar" role="progressbar" style="width: 0%"></div>
-        </div>
-
-        <div id="questionContainer">
-            <!-- Questions will be injected here -->
-            <div id="loader" class="d-none">
-                <div class="spinner-border text-primary"></div>
-            </div>
-            
-        </div>
-
-        
-            <!-- Update the quiz controls section -->
-            <div class="quiz-controls mt-4">
-                <button class="btn btn-secondary" id="prevBtn">Previous</button>
-                <button class="btn btn-primary" id="nextBtn">Next</button>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Case Study Sidebar -->
+            <div class="col-md-3 col-lg-2 bg-light border-end vh-100 overflow-auto">
+                <div class="p-3 sticky-top bg-light">
+                    <h5 class="mb-3">Case Studies</h5>
+                    <div id="caseStudyAccordion" class="accordion"></div>
+                </div>
             </div>
 
-    </main>
+            <!-- Main Content -->
+            <div class="col-md-9 col-lg-10 py-4">
+                <main aria-live="polite" aria-atomic="true" id="mainContent">
+                    <!-- <a href="#mainContent" class="skip-link">Skip to questions</a> -->
+                    
+                    <!-- Progress and Timer -->
+                    <div class="d-flex justify-content-between mb-4">
+                        <div class="progress flex-grow-1 me-3" style="height: 20px;">
+                            <div class="progress-bar" role="progressbar" style="width: 0%"></div>
+                        </div>
+                        <div class="text-nowrap">
+                            <span id="timer" class="badge bg-primary fs-6">00:00:00</span>
+                        </div>
+                    </div>
 
-        <!-- Load questions.js FIRST -->
-        <script src="js/questions.js"></script>
-        <!-- Then other dependencies -->
+                    <!-- Question Container -->
+                    <div id="questionContainer"></div>
+
+                    <!-- Quiz Controls -->
+                    <div class="quiz-controls mt-4">
+                        <button class="btn btn-secondary" id="prevBtn">Previous</button>
+                        <button class="btn btn-primary" id="nextBtn">Next</button>
+                        <div id="caseStudyAccordion" class="accordion"></div>
+                        <button id="submitAllBtn" class="btn btn-success" style="display: none;">Submit All Answers</button>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="transitionModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title">Continue to Next Case Study</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="transitionDefaultMessage">
+                        <p>You've completed all questions in this case study!</p>
+                        <p>Next: <strong id="nextCaseStudyTitle"></strong></p>
+                    </div>
+                    <div id="skippedQuestionsWarning" class="d-none"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Review</button>
+                    <button type="button" class="btn btn-primary" id="proceedButton">Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <!-- Finally quiz.js -->
+        <script src="js/questions.js"></script>
         <script src="js/quiz.js"></script>
 </body>
 </html>

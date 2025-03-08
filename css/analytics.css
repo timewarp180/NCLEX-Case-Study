@@ -107,3 +107,25 @@
 
     font-weight: 700 !important; 
 }
+#progressChart {
+    max-height: 400px;
+}
+
+.flagged-question .card {
+    border-left: 4px solid #ffc107;
+}
+
+.flagged-question .card-body {
+    padding: 1.5rem;
+}
+
+.text-success strong, 
+.text-danger strong {
+    font-weight: 600;
+}
+
+.alert-secondary {
+    background-color: #f8f9fa;
+    border-color: #dee2e6;
+}
+

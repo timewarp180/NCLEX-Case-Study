@@ -137,3 +137,135 @@
         padding: 0.25rem 0.5rem;
     }
 }
+
+.case-study-tabs {
+    position: sticky;
+    top: 56px; /* Below navbar */
+    background: white;
+    z-index: 1000;
+}
+
+.question-navigation {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+
+.page-item {
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+}
+
+.page-item.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.tab-pane {
+    padding: 1rem 0;
+}
+
+/* Add sidebar styles */
+.case-study-card {
+    margin-bottom: 0.5rem;
+}
+
+.case-study-button {
+    width: 100%;
+    text-align: left;
+    position: relative;
+}
+
+.progress-indicator {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.8rem;
+}
+
+.question-navigation {
+    display: flex;
+    gap: 0.25rem;
+    flex-wrap: wrap;
+}
+
+.question-indicator {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#flaggedAlert {
+    transition: all 0.3s ease;
+    position: sticky;
+    bottom: 20px;
+}
+
+/* Question indicator styles */
+.question-indicator {
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.question-indicator.unanswered {
+    background-color: #e9ecef;
+    border: 1px solid #dee2e6;
+}
+
+.question-indicator.answered {
+    background-color: #d1e7dd;
+    border: 1px solid #badbcc;
+}
+
+.question-indicator.flagged {
+    background-color: #fff3cd;
+    border: 1px solid #ffd8a8;
+}
+
+.question-indicator.current {
+    border: 2px solid #0d6efd;
+    transform: scale(1.1);
+}
+
+/* Modal Backdrop Fix */
+.modal-backdrop.show {
+    opacity: 0.8 !important;
+}
+
+/* Progress Bar Animation */
+.progress-bar {
+    transition: width 0.5s ease-in-out;
+}
+
+/* Submit Button Pulse Animation */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+#submitAllBtn {
+    animation: pulse 2s infinite;
+    display: none;
+}
+
+.question-indicator.unanswered { background-color: #e9ecef; border: 1px solid #dee2e6; }
+.question-indicator.answered { background-color: #d1e7dd; border: 1px solid #badbcc; }
+.question-indicator.flagged { background-color: #fff3cd; border: 1px solid #ffd8a8; }
+.question-indicator.current { background-color: #cfe2ff; border: 1px solid #9ec5fe; }

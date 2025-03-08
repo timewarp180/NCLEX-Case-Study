@@ -74,17 +74,75 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const renderProgressChart = (results) => {
-        const ctx = document.getElementById('progressChart').getContext('2d');
+        const ctx = document.getElementById('progressChart');
+        if (!ctx) {
+            console.error('Progress chart canvas not found');
+            return;
+        }
+    
+        // Verify we have valid data
+        if (!results || results.length === 0) {
+            console.log('No results available for progress chart');
+            return;
+        }
+    
+        // Ensure results have required properties
+        const validResults = results.filter(r => 
+            r.date && r.totalScore !== undefined && r.totalScore !== null
+        );
+    
+        // Sort by date
+        validResults.sort((a, b) => new Date(a.date) - new Date(b.date));
+    
+        // Create the chart
         new Chart(ctx, {
             type: 'line',
             data: {
-                labels: results.map((_, i) => `Attempt ${i + 1}`),
+                labels: validResults.map(r => 
+                    new Date(r.date).toLocaleDateString('en-US', {
+                        month: 'short',
+                        day: 'numeric'
+                    })
+                ),
                 datasets: [{
-                    label: 'Score Progress',
-                    data: results.map(r => r.score),
+                    label: 'Accuracy Progress (%)',
+                    data: validResults.map(r => r.totalScore),
                     borderColor: '#9C27B0',
-                    tension: 0.3
+                    backgroundColor: '#9C27B080',
+                    tension: 0.3,
+                    fill: false,
+                    pointRadius: 5,
+                    pointHoverRadius: 7
                 }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        ticks: {
+                            callback: (value) => `${value}%`
+                        }
+                    },
+                    x: {
+                        grid: {
+                            display: false
+                        }
+                    }
+                },
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            title: (context) => 
+                                new Date(validResults[context[0].dataIndex].date)
+                                    .toLocaleString(),
+                            label: (context) => 
+                                `Score: ${context.raw}%`
+                        }
+                    }
+                }
             }
         });
     };
@@ -174,6 +232,77 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
         }).join('');
     };
+
+    // function renderFlaggedQuestions(results) {
+    //     const container = document.getElementById('flaggedQuestions');
+    //     if(!container) return;
+    
+    //     // Get all flagged answers across all attempts
+    //     const flagged = results.flatMap(attempt => 
+    //         attempt.answers
+    //             .filter(a => a.flagged)
+    //             .map(a => ({
+    //                 ...a,
+    //                 date: attempt.date,
+    //                 caseStudyId: attempt.caseStudyId,
+    //                 totalScore: attempt.totalScore
+    //             }))
+    //     );
+    
+    //     if(flagged.length === 0) {
+    //         container.innerHTML = `<div class="alert alert-info">No flagged questions found</div>`;
+    //         return;
+    //     }
+    
+    //     container.innerHTML = flagged.map(answer => {
+    //         const question = getQuestionData(answer.questionId, answer.caseStudyId);
+    //         const caseStudy = window.questionsData.caseStudies.find(c => c.id === answer.caseStudyId);
+            
+    //         if(!question || !caseStudy) return '';
+            
+    //         return `
+    //             <div class="card mb-3">
+    //                 <div class="card-body">
+    //                     <div class="d-flex justify-content-between align-items-start">
+    //                         <div>
+    //                             <h5 class="text-primary">${caseStudy.title}</h5>
+    //                             <p class="text-muted">${caseStudy.scenario}</p>
+    //                         </div>
+    //                         <small class="text-muted">
+    //                             ${new Date(answer.date).toLocaleDateString()}
+    //                         </small>
+    //                     </div>
+                        
+    //                     <div class="bg-light p-3 rounded mt-2">
+    //                         <h6>Question: ${question.text}</h6>
+                            
+    //                         <div class="mt-3">
+    //                             <p class="${answer.answer === null ? 'text-danger' : 'text-dark'}">
+    //                                 <strong>Your Answer:</strong> 
+    //                                 ${answer.answer !== null ? 
+    //                                     question.options[answer.answer] : 
+    //                                     'No answer provided'
+    //                                 }
+    //                             </p>
+    //                             <p class="text-success">
+    //                                 <strong>Correct Answer:</strong> 
+    //                                 ${question.options[question.correct]}
+    //                             </p>
+    //                         </div>
+                            
+    //                         ${question.explanation ? `
+    //                             <div class="alert alert-secondary mt-3">
+    //                                 <strong>Rationale:</strong> ${question.explanation}
+    //                             </div>
+    //                         ` : ''}
+    //                     </div>
+    //                 </div>
+    //             </div>
+    //         `;
+    //     }).join('');
+    // };
+
+
 
     // Initial render
     renderOverallChart(results);
