@@ -265,6 +265,24 @@
     display: none;
 }
 
+/* Add this to your CSS file */
+.accordion-button .progress-indicator {
+    /* position: relative; */
+    top: 6px; /* Adjust this value to control vertical position */
+    margin-left: 8px; /* Add space between arrow and numbers */
+    vertical-align: super;
+    font-size: 0.9em;
+}
+
+/* Specific targeting for the progress indicator */
+.accordion-header button .progress-indicator {
+    display: inline-block;
+    transform: translateY(2px); /* Move upward */
+    margin-left: 10px;
+    font-weight: 500;
+    color: blue; /* Optional: change color for better visibility */
+}
+
 .question-indicator.unanswered { background-color: #e9ecef; border: 1px solid #dee2e6; }
 .question-indicator.answered { background-color: #d1e7dd; border: 1px solid #badbcc; }
 .question-indicator.flagged { background-color: #fff3cd; border: 1px solid #ffd8a8; }
