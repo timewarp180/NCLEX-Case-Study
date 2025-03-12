@@ -283,6 +283,19 @@
     color: blue; /* Optional: change color for better visibility */
 }
 
+#installBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  #installBtn:hover {
+    transform: translateY(-2px);
+  }
+
 .question-indicator.unanswered { background-color: #e9ecef; border: 1px solid #dee2e6; }
 .question-indicator.answered { background-color: #d1e7dd; border: 1px solid #badbcc; }
 .question-indicator.flagged { background-color: #fff3cd; border: 1px solid #ffd8a8; }

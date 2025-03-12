@@ -8,6 +8,8 @@
     <link rel="apple-touch-icon" href="images/icon.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+
 </head>
 <body class="landing-page">
     <!-- Navigation -->
@@ -17,10 +19,15 @@
                 <img src="images/logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-top">
                 Dr. Pebs
             </a>
+
             <div class="d-flex">
                 <button class="btn btn-outline-light me-2" id="textSizeBtn">A+</button>
-                <button class="btn btn-outline-light" id="nightModeBtn">🌙</button>
+                <button class="btn btn-outline-light me-2" id="nightModeBtn">🌙</button>
+                <button id="installBtn" class="btn btn-outline-light d-none">
+                    <i class="bi bi-download"></i> Install App
+                </button>
             </div>
+            
         </div>
     </nav>
 
@@ -66,7 +73,17 @@
         </div>
     </section>
 
+    <div class="pwa-install-toast position-fixed bottom-0 end-0 m-3 toast hide" role="alert">
+        <div class="toast-body">
+          Install Dr. Pebs for better experience!
+          <button class="btn btn-sm btn-primary ms-3" id="installToastBtn">
+            Install Now
+          </button>
+        </div>
+      </div>
+      
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/app.js"></script>
+    
 </body>
 </html>
